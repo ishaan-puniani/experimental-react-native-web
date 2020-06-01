@@ -1,29 +1,67 @@
 {
-  "name": "experimental-react-native-web",
-  "version": "0.1.0",
+  "name": "experiment_rnw",
+  "version": "0.0.1",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-native start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "web": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "debug": "open 'rndebugger://set-debugger-loc?host=localhost&port=8081'",
+    "lint": "eslint 'src/**/*.[jt]s?(x)' && tsc",
+    "test": "jest -u --forceExit --coverage --verbose --detectOpenHandles",
+    "watch": "npm run test -- --watchAll"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "react": "16.11.0",
+    "react-native": "0.62.2",
+    "react-dom": "16.11.0",
+    "react-native-web": "^0.12.2",
+    "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^1.0.0",
+    "@types/jest": "^24.0.24",
+    "@types/react-native": "^0.62.0",
+    "@types/react-test-renderer": "16.9.2",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.5.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "react-test-renderer": "16.11.0",
+    "prettier": "^2.0.4",
+    "typescript": "^3.8.3"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishaan-puniani/experimental-react-native-web.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-web"
+  ],
+  "author": "Ishaan Puniani <ishaan.puniani@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishaan-puniani/experimental-react-native-web/issues"
+  },
+  "homepage": "https://github.com/ishaan-puniani/experimental-react-native-web#readme",
   "browserslist": {
     "production": [
       ">0.2%",

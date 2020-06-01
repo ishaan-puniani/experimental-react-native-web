@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, {memo} from 'react';
+import {AppRegistry, View, Text, Platform, StyleSheet} from 'react-native';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const appName = 'experiment_rnw';
+const styles = StyleSheet.create({
+  container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+});
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+export const Main = memo(function Main() {
+  return (
+    <View style={styles.container}>
+      <Text>react native with web and typescript</Text>
+    </View>
+  );
+});
+
+AppRegistry.registerComponent(appName, () => Main);
+if (Platform.OS === 'web') {
+  AppRegistry.runApplication(appName, {
+    rootTag: document.getElementById('root'),
+  });
+}
