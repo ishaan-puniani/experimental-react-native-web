@@ -6,10 +6,10 @@ const styles = StyleSheet.create({
   container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
 });
 
-export const Main = memo(function Main() {
+export const Main = memo(() => {
   return (
     <View style={styles.container}>
-      <Text>react native with web and typescript</Text>
+      <Text>Experiment sucees for react native with web</Text>
     </View>
   );
 });
