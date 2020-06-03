@@ -8,7 +8,7 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import analytics from '@react-native-firebase/analytics';
+import {initialize, analytics} from './platformAdapter/firebase';
 const appName = 'experiment_rnw';
 const styles = StyleSheet.create({
   container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
@@ -39,3 +39,4 @@ if (Platform.OS === 'web') {
     rootTag: document.getElementById('root'),
   });
 }
+initialize();
