@@ -7,8 +7,7 @@ import {
   StyleSheet,
   Button,
 } from 'react-native';
-// @ts-ignore
-import Modal from 'modal-enhanced-react-native-web';
+import Modal from 'react-native-modal';
 
 const appName = 'experiment_rnw';
 const styles = StyleSheet.create({
